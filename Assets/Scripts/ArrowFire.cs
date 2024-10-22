@@ -13,13 +13,9 @@ public class ArrowFire : MonoBehaviour
     //    ArrowisFlying = StartCoroutine(arrowFlying());
     //}
 
-    private void Start()
-    {
-        rigid.MoveRotation(Quaternion.LookRotation(rigid.velocity, transform.up));
-    }
-
     public void FlyingArrow()
     {
+
         rigid.AddForce(transform.up*power);
 
         //Destroy(gameObject, 4f);
